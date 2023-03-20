@@ -28,6 +28,7 @@ We can then use this information to determine what is background and what is a v
 <br>
 <img src="https://github.com/alex-drake/OpenCV-Traffic-Counter/blob/master/trafficCounter/backgrounds/625_bg.jpg?raw=true" width="352"><br>
 Now that we have a background image, or an array of default/background values, we can use OpenCV to detect when these values go above a certain value (or 'threshold value'). We assume that this occurs when there is a vehicle within that pixel, and so use OpenCV to set the pixels that meet the threshold criteria to maximum brightness (this will make detecting shapes/vehicles easier later on).
+이제 배경 이미지 또는 기본값 / 배경 값 배열이 있으므로 OpenCV를 사용하여 이러한 값이 특정 값 (또는 '임계 값')을 초과하는지 감지 할 수 있습니다. 해당 픽셀 내에 차량이있을 때 발생한다고 가정하므로 OpenCV를 사용하여 임계 값 기준을 충족하는 픽셀을 최대 밝기로 설정합니다 (나중에 모양 / 차량을 더 쉽게 감지 할 수 있음).
 <br>
 <img src="https://github.com/alex-drake/OpenCV-Traffic-Counter/blob/master/trafficCounter/outputs/thresh.png?raw=true" width="352">
 <img src="https://github.com/alex-drake/OpenCV-Traffic-Counter/blob/master/trafficCounter/outputs/blobs.png?raw=true" width="352"><br>
