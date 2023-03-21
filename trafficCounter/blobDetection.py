@@ -22,7 +22,9 @@ import os
 loc = os.path.abspath('')
 
 # Video source
-inputFile = loc+'/inputs/625_201709280946.mp4'
+#inputFile = loc+'/inputs/625_201709280946.mp4'
+inputFile = loc+'/inputs/2023_03_21_10_38_12.mp4'
+#inputFile = loc+'/inputs/7.mp4'
 
 # for testing
 tracked_blobs = []
@@ -392,6 +394,9 @@ while ret:
         contours = contours[0] if len(contours) == 2 else contours[1]
 
         print("Found ",len(contours)," vehicle contours.")
+        ## contours :차량 갯수
+        
+        
         # process contours if they exist!
         if contours:
             for (i, contour) in enumerate(contours):    
