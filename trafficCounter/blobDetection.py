@@ -384,10 +384,13 @@ while ret:
         outblob.write(threshout)
         
         # Find contours aka blobs in the threshold image.
-        _, contours, hierarchy = cv2.findContours(thresholdImage, 
-                                                  cv2.RETR_EXTERNAL, 
-                                                  cv2.CHAIN_APPROX_SIMPLE)
-        
+        # _, contours, hierarchy = cv2.findContours(thresholdImage,
+        #                                           cv2.RETR_EXTERNAL,
+        #                                           cv2.CHAIN_APPROX_SIMPLE)
+        #_, contours, hierarchy = cv2.findContours(thresholdImage,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        contours = cv2.findContours(thresholdImage, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contours = contours[0] if len(contours) == 2 else contours[1]
+
         print("Found ",len(contours)," vehicle contours.")
         # process contours if they exist!
         if contours:
@@ -460,7 +463,7 @@ while ret:
     else:
         break
 
-cv2.line()
+# sean cv2.line()
 cv2.destroyAllWindows()
 cap.release()
 out.release()
