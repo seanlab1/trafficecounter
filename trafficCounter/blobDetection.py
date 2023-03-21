@@ -474,7 +474,7 @@ while ret:
     else:
         break
 
-# sean cv2.line()
+#sean cv2.line()
 cv2.destroyAllWindows()
 cap.release()
 out.release()
