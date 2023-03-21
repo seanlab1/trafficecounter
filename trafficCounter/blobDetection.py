@@ -28,7 +28,8 @@ loc = os.path.abspath('')
 #inputFile = loc+'/inputs/25_b.mp4'
 #inputFile = loc+'/inputs/09_b.mp4'
 #inputFile = loc+'/inputs/7_b.mp4'
-inputFile = loc+'/inputs/04_b.mp4'
+#inputFile = loc+'/inputs/04_b.mp4'
+inputFile = loc+'/inputs/2023_03_21_10_38_12.mp4'
 
 
 # for testing
