@@ -72,3 +72,19 @@ Many of these issues could be resolved by investigating alternative detection me
 * [Counting Cars Open CV (Dan Masek)](https://stackoverflow.com/a/36274515)
 * [Speed Tracking (Ian Dees)](https://github.com/iandees/speedtrack)
 * [SDC Vehicle Lane Detection (Max Ritter)](https://github.com/maxritter/SDC-Vehicle-Lane-Detection)
+
+
+https://github.com/seanlab1/traffic_counter
+
+
+python3.7 installl
+
+pip install opencv-python  ==> v4.4.0.46
+pip install opencv-contrib-python
+
+black & white
+https://www.videotoconvert.com/black-white/
+
+충주 CCTV정보
+
+https://its.chungju.go.kr/traffic/cctv.do#
