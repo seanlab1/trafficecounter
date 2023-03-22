@@ -29,8 +29,9 @@ loc = os.path.abspath('')
 #inputFile = loc+'/inputs/09_b.mp4'
 #inputFile = loc+'/inputs/7_b.mp4'
 #inputFile = loc+'/inputs/04_b.mp4'
-inputFile = loc+'/inputs/2023_03_21_10_38_12.mp4'
-
+#inputFile = loc+'/inputs/2023_03_21_10_38_12.mp4'
+#inputFile = loc+'/inputs/20_b.mp4'
+inputFile = loc+'/inputs/51_b.mp4'
 
 # for testing
 tracked_blobs = []
@@ -238,8 +239,8 @@ class VehicleCounter(object):
 # ============================================================================
 
 camera = re.match(r".*/(\d+)_.*", inputFile)
-camera = camera.group(1)
-
+#camera = camera.group(1)
+camera=camera.group(1)
 # import video file
 cap = cv2.VideoCapture(inputFile)
 

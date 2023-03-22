@@ -74,9 +74,10 @@ Many of these issues could be resolved by investigating alternative detection me
 * [SDC Vehicle Lane Detection (Max Ritter)](https://github.com/maxritter/SDC-Vehicle-Lane-Detection)
 
 
+
 https://github.com/seanlab1/traffic_counter
 
-
+https://www.python.org/downloads/release/python-370/
 python3.7 installl
 
 pip install opencv-python  ==> v4.4.0.46
