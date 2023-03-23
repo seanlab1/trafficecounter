@@ -1,0 +1,32 @@
+<opencv tutorial>
+
+https://github.com/seanlab1/opencv_tutorials
+
+
+
+
+<<traffice counter>>
+
+https://github.com/seanlab1/OpenCV-Traffic-Counter
+
+https://github.com/seanlab1/traffic_counter
+
+https://www.python.org/downloads/release/python-370/
+
+python3.7 installl
+
+pip install opencv-python  ==> v4.4.0.46
+pip install opencv-contrib-python
+
+black & white 
+
+https://www.videotoconvert.com/black-white/
+
+충주 CCTV정보
+
+https://its.chungju.go.kr/traffic/cctv.do#
+
+
+
+
+
