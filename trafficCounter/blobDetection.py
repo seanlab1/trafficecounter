@@ -30,8 +30,9 @@ loc = os.path.abspath('')
 #inputFile = loc+'/inputs/7_b.mp4'
 #inputFile = loc+'/inputs/04_b.mp4'
 #inputFile = loc+'/inputs/2023_03_21_10_38_12.mp4'
-#inputFile = loc+'/inputs/20_b.mp4'
-inputFile = loc+'/inputs/51_b.mp4'
+inputFile = loc+'/inputs/20_b.mp4'
+#inputFile = loc+'/inputs/51_b.mp4'
+#inputFile = loc+'/inputs/16_b.mp4'
 
 # for testing
 tracked_blobs = []
@@ -410,9 +411,14 @@ while ret:
                 # Find the bounding rectangle and center for each blob
                 (x, y, w, h) = cv2.boundingRect(contour)
                 contour_valid = (w > CONTOUR_WIDTH) and (h > CONTOUR_HEIGHT)
-                
-                print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
-                      ", h=",h,") valid=",contour_valid)
+                #sean
+                if contour_valid:
+                    print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
+                          ", h=",h,") valid=",contour_valid)
+                    
+
+                #print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
+                #      ", h=",h,") valid=",contour_valid)
                 
                 if not contour_valid:
                     continue
@@ -448,6 +454,7 @@ while ret:
         # print elapsed time to console
         elapsed_time = time.time()-start_time
         print("-- %s seconds --" % round(elapsed_time,2))
+
         
         # output video
         frame = cv2.cvtColor(frame, cv2.COLOR_HSV2BGR)
@@ -479,3 +486,4 @@ while ret:
 cv2.destroyAllWindows()
 cap.release()
 out.release()
+
