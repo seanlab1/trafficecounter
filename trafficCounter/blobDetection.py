@@ -415,7 +415,7 @@ while ret:
                 if contour_valid:
                     print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
                           ", h=",h,") valid=",contour_valid)
-                    
+
 
                 #print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
                 #      ", h=",h,") valid=",contour_valid)
