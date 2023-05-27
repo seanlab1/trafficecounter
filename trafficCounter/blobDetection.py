@@ -486,6 +486,48 @@ while ret:
 cv2.destroyAllWindows()
 print("total_cars:")
 print(total_cars)
+# import sqlite3
+# conn = sqlite3.connect("traffic2.db")
+# cur = conn.cursor()
+# conn.execute('CREATE TABLE traffic_data(id INTEGER, INTEGER, name TEXT, department TEXT, traffic_date TEXT)')
+#
+# import time
+#
+# # seconds passed since epoch
+# seconds = 1672215379.5045543
+#
+# # convert the time in seconds since the epoch to a readable format
+# local_time = time.ctime(seconds)
+#
+# print("Local time:", local_time)
+# cur.executemany(
+#     'INSERT INTO traffic_data VALUES (?, ?, ?, ?, ?)',
+#     [(1001, total_cars, local_time, 'Development', '2020-04-01 00:00:00.000'),
+#      (2001, total_cars, local_time, 'Marketing', '2020-04-01 00:00:00.000')
+#     ]
+# )
+#
+# conn.commit()
+# conn.close()
+
+
+import sqlite3
+conn = sqlite3.connect("traffic2.db")
+
+cur = conn.cursor()
+
+cur.execute("SELECT * FROM traffic_data")
+
+rows = cur.fetchall()
+
+for row in rows:
+    print(row)
+
+conn.close()
+
+
+
+
 cap.release()
 out.release()
 
