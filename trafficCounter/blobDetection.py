@@ -317,7 +317,7 @@ while ret:
     
     if ret and frame_no < total_frames:
 
-        print("Processing frame ",frame_no)
+        #sean print("Processing frame ",frame_no)
         
         # get returned time
         frame_time = time.time()
@@ -401,7 +401,7 @@ while ret:
         contours = cv2.findContours(thresholdImage, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         contours = contours[0] if len(contours) == 2 else contours[1]
 
-        print("Found ",len(contours)," vehicle contours.")
+        #sean print("Found ",len(contours)," vehicle contours.")
         ## contours :차량 갯수
         
         
@@ -412,9 +412,9 @@ while ret:
                 (x, y, w, h) = cv2.boundingRect(contour)
                 contour_valid = (w > CONTOUR_WIDTH) and (h > CONTOUR_HEIGHT)
                 #sean
-                if contour_valid:
-                    print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
-                          ", h=",h,") valid=",contour_valid)
+                #sean if contour_valid:
+                #     print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
+                #           ", h=",h,") valid=",contour_valid)
 
 
                 #print("Contour #",i,": pos=(x=",x,", y=",y,") size=(w=",w,
@@ -444,7 +444,7 @@ while ret:
             cv2.circle(frame, centroid, 2, (0, 0, 255), -1)
         
         if car_counter is None:
-            print("Creating vehicle counter...")
+            #sean print("Creating vehicle counter...")
             car_counter = VehicleCounter(frame.shape[:2], 2*frame.shape[0] / 3)
             
         # get latest count
@@ -453,7 +453,7 @@ while ret:
         
         # print elapsed time to console
         elapsed_time = time.time()-start_time
-        print("-- %s seconds --" % round(elapsed_time,2))
+        #sean print("-- %s seconds --" % round(elapsed_time,2))
 
         
         # output video
@@ -484,6 +484,8 @@ while ret:
 
 #sean cv2.line()
 cv2.destroyAllWindows()
+print("total_cars:")
+print(total_cars)
 cap.release()
 out.release()
 
