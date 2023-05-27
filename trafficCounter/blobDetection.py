@@ -488,42 +488,39 @@ print("total_cars:")
 print(total_cars)
 
 
-# import sqlite3
-# conn = sqlite3.connect("traffic2.db")
-# cur = conn.cursor()
-# conn.execute('CREATE TABLE traffic_data(id INTEGER, INTEGER, name TEXT, department TEXT)')
-#
-# import time
-# # seconds passed since epoch
-# seconds = 1672215379.5045543
-#
-# # convert the time in seconds since the epoch to a readable format
-# local_time = time.ctime(seconds)
-#
-# print("Local time:", local_time)
-# cur.executemany(
-#     'INSERT INTO traffic_data VALUES (?, ?, ?, ?)',
-#     [(1001, total_cars, local_time, 'Development')
-#     ]
-# )
-#
-# conn.commit()
-# conn.close()
-
-
 import sqlite3
-conn = sqlite3.connect("traffic2.db")
-
+conn = sqlite3.connect("traffic.db")
 cur = conn.cursor()
+# conn.execute('CREATE TABLE traffic_data(id INTEGER, INTEGER, name TEXT, department TEXT)')
 
-cur.execute("SELECT * FROM traffic_data")
+import time
 
-rows = cur.fetchall()
+localtime=time.localtime()
+t = time.asctime(localtime)
+print("Local time:", t)
+cur.executemany(
+    'INSERT INTO traffic_data VALUES (?, ?, ?, ?)',
+    [(1, total_cars, t, 'Development')
+    ]
+)
 
-for row in rows:
-    print(row)
-
+conn.commit()
 conn.close()
+
+
+# import sqlite3
+# conn = sqlite3.connect("traffic.db")
+#
+# cur = conn.cursor()
+#
+# cur.execute("SELECT * FROM traffic_data")
+#
+# rows = cur.fetchall()
+#
+# for row in rows:
+#     print(row)
+#
+# conn.close()
 
 
 
